@@ -9,7 +9,7 @@ script:
 - yarn test
 deploy:
   api_key:
-    secure:
+    secure: N881OZ9TXkIr1Z8hRSpFXP2R8ca1c5ZvVjxENjIb0iQkTYkb2fU+WezjaLp+TiFJxE6cdacH3vYuxaNbjUm63OnIFMRDKO5nCmxZM2Xix0MtK2XMv5xzlOZbDOzx9poXRqykoAI9j96N+V+wWlNocgqnlkpvJHe1nXsqffMU17HPf6Br9n9Cw86w4O1DyQn8AZc+qPvq6KvE/ykGb4mG6tuE4Esl++9mqTA7kUu9mqo0APGMfewLKHVqUHgKbvA3U8CqEuiFIJ/ARDck/Kg+6MBj3OE51KktIAJjaSadcWQwB59j7KXkKVo13J8J92BQm+A75e1QMKuqf1UrxfDDYG1Vylugyduv6+bXPMDr66NTHQjfqK+JtmZahmkM93cjVi2iFjvNKrf4G+ixLJ1ntWxvSetsILnN0jGdrHDYNihHMBxmGNXYkEH5NEanDDdo8kqhp4t9wJzzfEbPwsro5DHZskT2fQCoeTRh03p/TQZvKvVHDjpOw5SxkKababibpnAmsAKL5orhFJ2HVDF59FXKIbW1XkE/ZrkRjEY1oVyJE21KRaJrCsCDGqoZ+jbe4/DmlxzotLgaImNLDT6+KQxGEJxgTcTFIRksm4YWCe1wWIAh7iNJNk37suaSi7KgiYjgmFg6r2WdwrijRN/pSMt9p46kDbOQZ655t8kJPNI=
   email: npmjs@charlesstover.com
   on:
     branch: master
