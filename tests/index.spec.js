@@ -8,6 +8,6 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('react-quotes', () => {
 
   it('should render without crashing', () => {
-    shallow(<Quotes />);
+    shallow(<Quotes quotes={[]} />);
   });
 });
