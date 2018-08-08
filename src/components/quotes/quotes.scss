@@ -1,5 +1,20 @@
 div.root {
   display: flex;
   flex-direction: row;
-  overflow: hidden;
+
+  > div.left:after {
+    content: "<";
+  }
+
+  > div.left,
+  > div.right {
+    align-items: center;
+    display: flex;
+    max-width: 1em;
+    min-width: 1em;
+  }
+
+  > div.right:before {
+    content: ">";
+  }
 }

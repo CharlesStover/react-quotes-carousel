@@ -6,11 +6,27 @@ div.root {
   max-width: 100%;
   min-width: 100%;
 
-  blockquote.quote {
+  > blockquote.quote {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     margin: 0;
+
+    > cite.author {
+      padding-right: 2em;
+      text-align: right;
+
+      &:before {
+        content: "\2014  ";
+      }
+    }
+
+    > q.quote {
+      flex-grow: 1;
+    }
   }
 
-  div.image {
+  > div.image {
     $size: 100px;
 
     border-radius: $size;
@@ -25,7 +41,7 @@ div.root {
     max-width: $size;
     min-width: $size;
 
-    img.image {
+    > img.image {
       height: $size;
       pointer-events: none;
       width: $size;

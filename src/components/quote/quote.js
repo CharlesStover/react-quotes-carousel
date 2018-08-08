@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './quote.scss';
 
-class Quote extends React.PureComponent {
+export default class Quote extends React.PureComponent {
   render() {
     return (
       <div className={styles.root}>
@@ -23,15 +23,10 @@ class Quote extends React.PureComponent {
           <cite
             children={this.props.author}
             className={styles.author}
-          />,{' '}
-          <span
-            children={this.props.company}
-            className={styles.company}
+            title={this.props.company}
           />
         </blockquote>
       </div>
     );
   }
 }
-
-export default Quote;

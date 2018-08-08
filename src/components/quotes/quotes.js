@@ -1,11 +1,12 @@
 import memoizeOne from 'memoize-one';
 import React from 'react';
-import mapQuotes from './map-quotes';
+import Carousel from '../carousel/carousel';
+import shuffleArray from '../../constants/shuffle-array';
 import styles from './quotes.scss';
 
-class Quotes extends React.PureComponent {
+export default class Quotes extends React.PureComponent {
 
-  mapQuotes = memoizeOne(mapQuotes);
+  shuffleQuotes = memoizeOne(shuffleArray);
 
   get className() {
     const classNames = [ styles.root ];
@@ -15,14 +16,21 @@ class Quotes extends React.PureComponent {
     return classNames.join(' ');
   }
 
+  get quotes() {
+    return (
+      this.props.shuffle ?
+        this.shuffleQuotes(this.props.quotes) :
+        this.props.quotes
+    );
+  }
+
   render() {
     return (
-      <div
-        children={this.mapQuotes(this.props.quotes, this.props.shuffle)}
-        className={this.className}
-      />
+      <div className={this.className}>
+        <div className={styles.left} />
+        <Carousel children={this.quotes} />
+        <div className={styles.right} />
+      </div>
     );
   }
 }
-
-export default Quotes;
