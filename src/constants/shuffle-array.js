@@ -1,4 +1,4 @@
-const shuffle = a => {
+const shuffleArray = a => {
   const b = [...a];
   const c = [];
   const total = a.length;
@@ -8,4 +8,4 @@ const shuffle = a => {
   return c;
 };
 
-export default shuffle;
+export default shuffleArray;
