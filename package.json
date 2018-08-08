@@ -20,6 +20,8 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^23.4.2",
+    "jsdom": "^11.12.0",
+    "jsdom-global": "^3.0.2",
     "node-sass": "^4.9.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -30,9 +32,9 @@
   },
   "homepage": "https://github.com/CharlesStover/react-quotes#readme",
   "jest": {
-    "globals": {
-      "window": {}
-    },
+    "setupFiles": [
+      "<rootDir>/tests/setup-file.js"
+    ],
     "testEnvironment": "node"
   },
   "keywords": [
