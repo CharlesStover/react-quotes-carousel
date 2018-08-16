@@ -53,8 +53,9 @@
   "scripts": {
     "build": "webpack",
     "dev": "set NODE_ENV=development && webpack",
+    "jest": "jest tests/.+.spec.js --detectOpenHandles",
     "prepublishOnly": "npm run build",
-    "test": "jest tests/.+.spec.js --detectOpenHandles"
+    "test": "echo \"No test.\""
   },
   "dependencies": {
     "memoize-one": "^4.0.0"
