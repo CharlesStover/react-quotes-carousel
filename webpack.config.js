@@ -1,5 +1,10 @@
 const path = require('path');
 
+const NODE_ENV =
+  process.env.NODE_ENV ?
+    process.env.NODE_ENV.trim() :
+    'production';
+
 module.exports = {
   entry: './src/index.js',
   externals: {
@@ -10,7 +15,7 @@ module.exports = {
       root: 'React'
     }
   },
-  mode: process.env.NODE_ENV || 'production',
+  mode: NODE_ENV,
   module: {
     rules: [
 
@@ -65,5 +70,5 @@ module.exports = {
       'react': path.resolve(__dirname, './node_modules/react')
     }
   },
-  watch: process.env.NODE_ENV !== 'production'
+  watch: NODE_ENV === 'development'
 };
