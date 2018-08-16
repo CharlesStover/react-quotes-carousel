@@ -5,7 +5,11 @@ import styles from './carousel.scss';
 export default class Carousel extends React.PureComponent {
   render() {
     return (
-      <div className={styles.root}>
+      <div
+        className={styles.root}
+        onMouseOut={this.props.onMouseOut}
+        onMouseOver={this.props.onMouseOver}
+      >
         <Quote
           className={styles.incoming}
           {...this.props.incoming}

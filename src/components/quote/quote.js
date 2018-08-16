@@ -2,9 +2,14 @@ import React from 'react';
 import styles from './quote.scss';
 
 export default class Quote extends React.PureComponent {
+
+  get rootClassName() {
+    return styles.root + ' ' + this.props.className;
+  }
+
   render() {
     return (
-      <div className={styles.root}>
+      <div className={this.rootClassName}>
         <div className={styles.image}>
           <img
             alt={this.props.author}
