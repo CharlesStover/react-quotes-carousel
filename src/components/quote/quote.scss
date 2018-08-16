@@ -1,11 +1,12 @@
 div.root {
+  direction: ltr;
   display: flex;
   flex-basis: 0;
   flex-direction: row;
   flex-grow: 1;
-  margin-right: -100%;
   max-width: 100%;
   min-width: 100%;
+  padding: 0 1em;
 
   > blockquote.quote {
     display: flex;
@@ -14,7 +15,6 @@ div.root {
     margin: 0;
 
     > cite.author {
-      padding-right: 2em;
       text-align: right;
 
       &:before {

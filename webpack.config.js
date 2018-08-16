@@ -10,7 +10,7 @@ module.exports = {
       root: 'React'
     }
   },
-  mode: 'production',
+  mode: process.env.NODE_ENV || 'production',
   module: {
     rules: [
 
@@ -20,6 +20,12 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
+      },
+
+      // PNG
+      {
+        test: [ /\.png$/ ],
+        loader: require.resolve('url-loader')
       },
 
       // SASS
@@ -58,5 +64,6 @@ module.exports = {
     alias: {
       'react': path.resolve(__dirname, './node_modules/react')
     }
-  }
+  },
+  watch: process.env.NODE_ENV !== 'production'
 };

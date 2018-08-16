@@ -1,20 +1,74 @@
+@keyframes carousel-incoming-forward {
+  0% {
+    margin-left: -100%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes carousel-incoming-backward {
+  0% {
+    margin-right: -100%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
 div.root {
   display: flex;
   flex-direction: row;
 
-  > div.left:after {
-    content: "<";
+  > div.carousel {
+    display: flex;
+    flex-basis: 0;
+    flex-direction: row;
+    flex-grow: 1;
+    overflow: hidden;
+
+    &.backward {
+      direction: ltr;
+
+      .incoming {
+        animation-name: carousel-incoming-forward;
+      }
+    }
+
+    &.forward {
+      direction: rtl;
+
+      .incoming {
+        animation-name: carousel-incoming-backward;
+      }
+    }
+
+    .incoming {
+      animation-delay: 0s;
+      animation-duration: 1.5s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in-out;
+      margin-left: 0;
+    }
+  }
+
+  > div.left {
+    background-image: url('../../assets/back.png');
+    background-position: left center;
   }
 
   > div.left,
   > div.right {
     align-items: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
     display: flex;
-    max-width: 1em;
-    min-width: 1em;
+    max-width: 26px;
+    min-width: 26px;
   }
 
-  > div.right:before {
-    content: ">";
+  > div.right {
+    background-image: url('../../assets/forward.png');
+    background-position: right center;
   }
 }
