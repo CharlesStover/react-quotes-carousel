@@ -8,13 +8,14 @@ div.root {
   min-width: 100%;
   padding: 0 1em;
 
-  > blockquote.quote {
+  > blockquote {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     margin: 0;
+    padding-left: 1em;
 
-    > cite.author {
+    > cite {
       text-align: right;
 
       &:before {
@@ -22,7 +23,7 @@ div.root {
       }
     }
 
-    > q.quote {
+    > q {
       flex-grow: 1;
     }
   }
@@ -42,7 +43,7 @@ div.root {
     max-width: $size;
     min-width: $size;
 
-    > img.image {
+    > img {
       height: $size;
       pointer-events: none;
       width: $size;

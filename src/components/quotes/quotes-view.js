@@ -4,6 +4,12 @@ import styles from './quotes.scss';
 
 export default class Quotes extends React.PureComponent {
 
+  // Memoization properties:
+  _animationDuration = 1500;
+  _incomingStyle = {
+    animationDuration: '1.5s'
+  };
+
   get carouselClassName() {
     const classNames = [ styles.carousel ];
     classNames.push(
@@ -12,6 +18,18 @@ export default class Quotes extends React.PureComponent {
         styles.backward
     );
     return classNames.join(' ');
+  }
+
+  get incomingStyle() {
+    if (
+      this._animationDuration !== this.props.animationDuration
+    ) {
+      this._animationDuration = this.props.animationDuration;
+      this._incomingStyle = {
+        animationDuration: (this.props.animationDuration / 1000) + 's'
+      };
+    }
+    return this._incomingStyle;
   }
 
   get rootClassName() {
@@ -35,12 +53,11 @@ export default class Quotes extends React.PureComponent {
         />
         <div className={this.carouselClassName}>
           <Quote
-            className={styles.incoming}
             key={'in ' + this.props.incoming.quote}
+            style={this.incomingStyle}
             {...this.props.incoming}
           />
           <Quote
-            className={styles.outgoing}
             key={'out ' + this.props.outgoing.quote}
             {...this.props.outgoing}
           />

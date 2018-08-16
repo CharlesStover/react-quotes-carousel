@@ -3,9 +3,9 @@ import React from 'react';
 import shuffleArray from '../../constants/shuffle-array';
 import View from './quotes-view';
 
-const ANIMATION_DURATION = 1500;
+const DEFAULT_ANIMATION_DURATION = 1500;
 
-const DELAY = 5000;
+const DEFAULT_DELAY = 5000;
 
 const EVENT_LISTENER_OPTIONS = {
   passive: true
@@ -36,6 +36,10 @@ export default class Quotes extends React.PureComponent {
     window.removeEventListener('focus', this.handleWindowFocus, EVENT_LISTENER_OPTIONS);
   }
 
+  get animationDuration() {
+    return this.props.animationDuration || DEFAULT_ANIMATION_DURATION;
+  }
+
   get backwardIndex() {
     if (this.state.index === 0) {
       return this.quotes.length - 1;
@@ -47,8 +51,16 @@ export default class Quotes extends React.PureComponent {
     window.clearTimeout(this.timeout);
   }
 
+  get delay() {
+    return this.props.delay || DEFAULT_DELAY;
+  }
+
+  get forwardIndex() {
+    return (this.state.index + 1) % this.quotes.length;
+  }
+
   handleForward = () => {
-    if (this.lastTransition > Date.now() - ANIMATION_DURATION) {
+    if (this.isAnimating) {
       return false;
     }
     this.lastTransition = Date.now();
@@ -66,7 +78,7 @@ export default class Quotes extends React.PureComponent {
   };
 
   handlePrevious = () => {
-    if (this.lastTransition > Date.now() - ANIMATION_DURATION) {
+    if (this.isAnimating) {
       return false;
     }
     this.lastTransition = Date.now();
@@ -102,8 +114,8 @@ export default class Quotes extends React.PureComponent {
     this.setTimeout(false);
   };
 
-  get forwardIndex() {
-    return (this.state.index + 1) % this.quotes.length;
+  get isAnimating() {
+    return this.lastTransition > Date.now() - this.animationDuration;
   }
 
   get outgoingIndex() {
@@ -123,14 +135,15 @@ export default class Quotes extends React.PureComponent {
     this.timeout = window.setTimeout(
       this.handleForward,
       animation ?
-        DELAY :
-        DELAY - ANIMATION_DURATION
+        this.delay :
+        this.delay - this.animationDuration
     );
   }
 
   render() {
     return (
       <View
+        animationDuration={this.animationDuration}
         forward={this.state.forward}
         incoming={this.quotes[this.state.index]}
         onForward={this.handleForward}

@@ -30,7 +30,7 @@ div.root {
     &.backward {
       direction: ltr;
 
-      .incoming {
+      > div:first-child {
         animation-name: carousel-incoming-forward;
       }
     }
@@ -38,14 +38,13 @@ div.root {
     &.forward {
       direction: rtl;
 
-      .incoming {
+      > div:first-child {
         animation-name: carousel-incoming-backward;
       }
     }
 
-    .incoming {
+    > div:first-child {
       animation-delay: 0s;
-      animation-duration: 1.5s;
       animation-iteration-count: 1;
       animation-timing-function: ease-in-out;
       margin-left: 0;

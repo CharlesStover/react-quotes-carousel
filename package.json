@@ -1,11 +1,11 @@
 {
   "name": "react-quotes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Charles Stover <npmjs@charlesstover.com>",
   "bugs": {
     "url": "https://github.com/CharlesStover/react-quotes/issues"
   },
-  "description": "A quotes carousel for React.",
+  "description": "a dependency-free quotes carousel for React",
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.56",
     "@babel/plugin-proposal-class-properties": "^7.0.0-beta.56",
