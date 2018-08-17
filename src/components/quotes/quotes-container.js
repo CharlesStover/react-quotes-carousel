@@ -1,4 +1,3 @@
-import memoizeOne from 'memoize-one';
 import React from 'react';
 import shuffleArray from '../../constants/shuffle-array';
 import View from './quotes-view';
@@ -13,9 +12,10 @@ const EVENT_LISTENER_OPTIONS = {
 
 export default class Quotes extends React.PureComponent {
 
-  lastTransition = 0;
+  _shuffledQuotes = null;
+  _shuffledQuotesParameter = null;
 
-  shuffleQuotes = memoizeOne(shuffleArray);
+  lastTransition = 0;
 
   state = {
     forward: true,
@@ -125,7 +125,7 @@ export default class Quotes extends React.PureComponent {
   get quotes() {
     return (
       this.props.shuffle ?
-        this.shuffleQuotes(this.props.quotes) :
+        this.shuffledQuotes :
         this.props.quotes
     );
   }
@@ -138,6 +138,14 @@ export default class Quotes extends React.PureComponent {
         this.delay :
         this.delay - this.animationDuration
     );
+  }
+
+  get shuffledQuotes() {
+    if (this._shuffledQuotesParameter !== this.props.quotes) {
+      this._shuffledQuotesParameter = this.props.quotes;
+      this._shuffledQuotes = shuffleArray(this.props.quotes);
+    }
+    return this._shuffledQuotes;
   }
 
   render() {

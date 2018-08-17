@@ -1,6 +1,6 @@
 {
   "name": "react-quotes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Charles Stover <npmjs@charlesstover.com>",
   "bugs": {
     "url": "https://github.com/CharlesStover/react-quotes/issues"
@@ -56,8 +56,5 @@
     "jest": "jest tests/.+.spec.js --detectOpenHandles",
     "prepublishOnly": "npm run build",
     "test": "echo \"No test.\""
-  },
-  "dependencies": {
-    "memoize-one": "^4.0.0"
   }
 }
