@@ -18,6 +18,7 @@ export default class Quotes extends React.PureComponent {
   lastTransition = 0;
 
   state = {
+    first: true,
     forward: true,
     index: 0
   };
@@ -67,6 +68,7 @@ export default class Quotes extends React.PureComponent {
     this.clearTimeout();
     this.setState(
       state => ({
+        first: false,
         forward: true,
         index: (state.index + 1) % this.quotes.length
       }),
@@ -85,6 +87,7 @@ export default class Quotes extends React.PureComponent {
     this.clearTimeout();
     this.setState(
       state => ({
+        first: false,
         forward: false,
         index:
           state.index === 0 ?
@@ -151,6 +154,7 @@ export default class Quotes extends React.PureComponent {
   render() {
     return (
       <View
+        animate={!this.state.first}
         animationDuration={this.animationDuration}
         forward={this.state.forward}
         incoming={this.quotes[this.state.index]}

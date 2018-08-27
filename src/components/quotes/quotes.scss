@@ -27,20 +27,23 @@ div.root {
     flex-grow: 1;
     overflow: hidden;
 
-    &.backward {
-      direction: ltr;
+    &.animating {
 
-      > div:first-child {
+      &.backward > div:first-child {
         animation-name: carousel-incoming-forward;
       }
+  
+      &.forward > div:first-child {
+        animation-name: carousel-incoming-backward;
+      }
+    }
+
+    &.backward {
+      direction: ltr;
     }
 
     &.forward {
       direction: rtl;
-
-      > div:first-child {
-        animation-name: carousel-incoming-backward;
-      }
     }
 
     > div:first-child {

@@ -17,6 +17,9 @@ export default class Quotes extends React.PureComponent {
         styles.forward :
         styles.backward
     );
+    if (this.props.animate) {
+      classNames.push(styles.animating);
+    }
     return classNames.join(' ');
   }
 
