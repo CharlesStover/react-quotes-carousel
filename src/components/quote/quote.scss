@@ -1,21 +1,18 @@
 div.root {
   direction: ltr;
-  display: flex;
-  flex-basis: 0;
-  flex-direction: row;
-  flex-grow: 1;
+  display: block;
   max-width: 100%;
   min-width: 100%;
   padding: 0 1em;
 
   > blockquote {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+    display: inline;
     margin: 0;
-    padding-left: 1em;
+    padding: 0;
 
     > cite {
+      display: block;
+      padding-top: 1em;
       text-align: right;
 
       &:before {
@@ -25,6 +22,8 @@ div.root {
 
     > q {
       flex-grow: 1;
+      hyphens: auto;
+      overflow-wrap: break-word;
     }
   }
 
@@ -36,10 +35,13 @@ div.root {
       0 1px 5px 0 rgba(0, 0, 0, 0.2),
       0 2px 2px 0 rgba(0, 0, 0, 0.14),
       0 3px 1px -2px rgba(0, 0, 0, 0.12);
+    float: left;
     max-height: $size;
     min-height: $size;
     opacity: 0.75;
     overflow: hidden;
+    margin-bottom: 0.5em;
+    margin-right: 1em;
     max-width: $size;
     min-width: $size;
 
