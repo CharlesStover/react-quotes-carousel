@@ -6,8 +6,6 @@ const DEFAULT_ANIMATION_DURATION = 1500;
 
 const DEFAULT_DELAY = 5000;
 
-const DEFAULT_SHORT_DELAY = 500;
-
 const EVENT_LISTENER_OPTIONS = {
   passive: true
 };
@@ -146,7 +144,7 @@ export default class Quotes extends React.PureComponent {
   }
 
   get shortDelay() {
-    return this.props.shortDelay || DEFAULT_SHORT_DELAY;
+    return this.props.shortDelay || this.animationDuration;
   }
 
   get shuffledQuotes() {
