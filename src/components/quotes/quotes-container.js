@@ -134,13 +134,15 @@ export default class Quotes extends React.PureComponent {
   }
 
   setTimeout(animation = true) {
-    this.clearTimeout();
-    this.timeout = window.setTimeout(
-      this.handleForward,
-      animation ?
-        this.delay :
-        this.shortDelay
-    );
+    if (!this.isAnimating) {
+      this.clearTimeout();
+      this.timeout = window.setTimeout(
+        this.handleForward,
+        animation ?
+          this.delay :
+          this.shortDelay
+      );
+    }
   }
 
   get shortDelay() {
