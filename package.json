@@ -1,9 +1,9 @@
 {
-  "name": "react-quotes",
-  "version": "1.0.7",
+  "name": "react-quotes-carousel",
+  "version": "1.0.0",
   "author": "Charles Stover <npmjs@charlesstover.com>",
   "bugs": {
-    "url": "https://github.com/CharlesStover/react-quotes/issues"
+    "url": "https://github.com/CharlesStover/react-quotes-carousel/issues"
   },
   "description": "a dependency-free quotes carousel for React",
   "devDependencies": {
@@ -30,7 +30,7 @@
     "webpack": "^4.16.4",
     "webpack-cli": "^3.1.0"
   },
-  "homepage": "https://github.com/CharlesStover/react-quotes#readme",
+  "homepage": "https://github.com/CharlesStover/react-quotes-carousel#readme",
   "jest": {
     "setupFiles": [
       "<rootDir>/tests/setup-file.js"
@@ -48,7 +48,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CharlesStover/react-quotes.git"
+    "url": "git+https://github.com/CharlesStover/react-quotes-carousel.git"
   },
   "scripts": {
     "build": "webpack",
