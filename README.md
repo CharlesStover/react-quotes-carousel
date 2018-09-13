@@ -1,17 +1,17 @@
 # react-quotes
 `react-quotes` is a dependency-free quotes carousel for React!
 
-[![package](https://img.shields.io/github/package-json/v/CharlesStover/react-quotes.svg)](https://travis-ci.com/CharlesStover/react-quotes/)
-[![build](https://api.travis-ci.com/CharlesStover/react-quotes.svg)](https://travis-ci.com/CharlesStover/react-quotes/)
-[![downloads](https://img.shields.io/npm/dt/react-quotes.svg)](https://www.npmjs.com/package/react-quotes)
-[![minified size](https://img.shields.io/bundlephobia/min/react-quotes.svg)](https://www.npmjs.com/package/react-quotes)
-[![minzipped size](https://img.shields.io/bundlephobia/minzip/react-quotes.svg)](https://www.npmjs.com/package/react-quotes)
+[![package](https://img.shields.io/github/package-json/v/CharlesStover/react-quotes-carousel.svg)](https://travis-ci.com/CharlesStover/react-quotes-carousel/)
+[![build](https://api.travis-ci.com/CharlesStover/react-quotes-carousel.svg)](https://travis-ci.com/CharlesStover/react-quotes-carousel/)
+[![downloads](https://img.shields.io/npm/dt/react-quotes-carousel.svg)](https://www.npmjs.com/package/react-quotes-carousel)
+[![minified size](https://img.shields.io/bundlephobia/min/react-quotes-carousel.svg)](https://www.npmjs.com/package/react-quotes-carousel)
+[![minzipped size](https://img.shields.io/bundlephobia/minzip/react-quotes-carousel.svg)](https://www.npmjs.com/package/react-quotes-carousel)
 
 ![screenshot](https://user-images.githubusercontent.com/343837/44218050-7d7a2000-a13e-11e8-9fde-a64fc804262d.gif)
 
 ## Install
-* `npm install react-quotes --save` or
-* `yarn add react-quotes`
+* `npm install react-quotes-carousel --save` or
+* `yarn add react-quotes-carousel`
 
 ## Props
 * animationDuration (optional)
