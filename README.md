@@ -1,19 +1,22 @@
-# react-quotes
-`react-quotes` is a dependency-free quotes carousel for React!
+# Quotes Carousel for React [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Add%20a%20beautiful%20quotes%20carousel%20to%20your%20React%20application.%20pic.twitter.com/Mdv1V6L8Ih&url=https://github.com/CharlesStover/react-quotes-carousel&via=CharlesStover&hashtags=react,reactjs,javascript,webdev,webdeveloper,webdevelopment)
 
-[![package](https://img.shields.io/github/package-json/v/CharlesStover/react-quotes-carousel.svg)](https://travis-ci.com/CharlesStover/react-quotes-carousel/)
-[![build](https://api.travis-ci.com/CharlesStover/react-quotes-carousel.svg)](https://travis-ci.com/CharlesStover/react-quotes-carousel/)
-[![downloads](https://img.shields.io/npm/dt/react-quotes-carousel.svg)](https://www.npmjs.com/package/react-quotes-carousel)
+`react-quotes-carousel` is a dependency-free quotes carousel for React!
+
+[![version](https://img.shields.io/npm/v/react-quotes-carousel.svg)](https://www.npmjs.com/package/react-quotes-carousel)
 [![minified size](https://img.shields.io/bundlephobia/min/react-quotes-carousel.svg)](https://www.npmjs.com/package/react-quotes-carousel)
 [![minzipped size](https://img.shields.io/bundlephobia/minzip/react-quotes-carousel.svg)](https://www.npmjs.com/package/react-quotes-carousel)
+[![downloads](https://img.shields.io/npm/dt/react-quotes-carousel.svg)](https://www.npmjs.com/package/react-quotes-carousel)
+[![build](https://api.travis-ci.com/CharlesStover/react-quotes-carousel.svg)](https://travis-ci.com/CharlesStover/react-quotes-carousel/)
 
-![screenshot](https://user-images.githubusercontent.com/343837/44218050-7d7a2000-a13e-11e8-9fde-a64fc804262d.gif)
+[![screenshot](https://user-images.githubusercontent.com/343837/44218050-7d7a2000-a13e-11e8-9fde-a64fc804262d.gif)](https://www.npmjs.com/package/react-quotes-carousel)
 
 ## Install
+
 * `npm install react-quotes-carousel --save` or
 * `yarn add react-quotes-carousel`
 
 ## Props
+
 * animationDuration (optional)
 
   The duration of the sliding animation, in milliseconds. Default: `1500`
