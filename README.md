@@ -46,3 +46,9 @@ interface Quote {
 * shuffle (optional)
 
   Shuffles the quotes before rendering them. Default: `false`
+
+## Sponsor 💗
+
+If you are a fan of this project, you may
+[become a sponsor](https://github.com/sponsors/CharlesStover)
+via GitHub's Sponsors Program.
